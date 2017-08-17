@@ -25,7 +25,7 @@ const mqtt_instance = {
 
 before(() => {
   mockery.enable()
-  mockery.registerAllowables(['../index', 'tweetnacl-util', 'libsodium', 'crypto', 'libsodium-wrappers']);
+  mockery.registerAllowables(['../index', 'tweetnacl-util', 'libsodium', 'crypto', 'libsodium-wrappers', 'http']);
   mockery.registerMock('mqtt', mqtt_mock);
   app = require("../index")
 })
