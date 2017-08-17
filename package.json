@@ -13,6 +13,7 @@
     "libsodium": "^0.5.2",
     "libsodium-wrappers": "^0.5.2",
     "mqtt": "^2.11.0",
+    "request": "^2.81.0",
     "tweetnacl-util": "^0.15.0"
   },
   "devDependencies": {
