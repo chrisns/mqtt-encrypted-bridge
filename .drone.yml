@@ -16,7 +16,7 @@ pipeline:
 
   deploy:
     image: docker
-    secrets: [ USER_CODE, PANEL_WEB_NAME, HOST, USER_ID, REFRESH, SECRET, DOOR_LOCK_URL ]
+    secrets: [ ENC_HOST, ENC_USER, ENC_PASS, UENC_HOST, UENC_USER, UENC_PASS, SUBSCRIBE, CLIENT_ID, ENCRYPTION_KEY, BI_DIRECTIONAL ]
     commands:
       - docker stack deploy --compose-file docker-compose.yml mqtt-encrypted-bridge
     volumes:
