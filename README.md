@@ -34,3 +34,9 @@ Or use the docker compose stack supplied to deploy to a swarm
   ENCRYPTION_KEY=foobar \
   docker stack deploy -c docker-compose.yml mqtt-encrypted-bridge
 ```
+
+There is a http server on port `3000`, it'll return `200` if both connections are connected, otherwise `503`.
+
+There is a bidirectional sync, where it'll take things published to the unencrypted mqtt, encrypt them and publish to the encrypted endpoint. However right now that ends up in an endless loop and I've not fixed it yet. This would allow you to send commands and such to the end device.
+
+PRs welcome ;)
