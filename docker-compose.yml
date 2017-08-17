@@ -1,0 +1,17 @@
+version: "3"
+services:
+  service:
+    read_only: true
+    deploy:
+      replicas: 1
+    image: chrisns/mqtt-encrypted-bridge:${DRONE_BUILD_NUMBER}
+    environment:
+      - ENC_HOST=${ENC_HOST}
+      - ENC_USER=${ENC_USER}
+      - ENC_PASS=${ENC_PASS}
+      - UENC_HOST=${UENC_HOST}
+      - UENC_USER=${UENC_USER}
+      - UENC_PASS=${UENC_PASS}
+      - SUBSCRIBE=${SUBSCRIBE}
+      - CLIENT_ID=${CLIENT_ID}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
