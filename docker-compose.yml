@@ -4,6 +4,10 @@ services:
     read_only: true
     deploy:
       replicas: 1
+      resources:
+        limits:
+          cpus: '0.40'
+          memory: 128M
     image: chrisns/mqtt-encrypted-bridge:${DRONE_BUILD_NUMBER}
     environment:
       - ENC_HOST=${ENC_HOST}
