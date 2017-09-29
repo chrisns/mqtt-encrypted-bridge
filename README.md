@@ -1,5 +1,7 @@
 #mqtt-encrypted bridge
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrisns/mqtt-encrypted-bridge.svg)](https://greenkeeper.io/)
+
 Designed to work with owntracks
 
 Intention is with this that you can use a free public mqtt service such as [cloudmqtt](http://cloudmqtt.com) to let owntracks log to, but without revealing your actual location to that public service, then run a private behind a firewall mqtt cluster that you don't need to expose to the world that will get the locations unencrypted in to.
