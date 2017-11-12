@@ -62,13 +62,6 @@ const encrypt_message = (message) => {
   return util.encodeBase64(Buffer.concat([nonce, Buffer.from(sodium.crypto_secretbox_easy(buf, nonce, secret))]));
 }
 
-module.exports = {
-  encrypt_message: encrypt_message,
-  decrypt_message: decrypt_message,
-  handle_message: handle_message,
-  str2ab: str2ab
-}
-
 encrypted_client_endpoint.on('connect', () => encrypted_client_endpoint.subscribe(SUBSCRIBE))
 
 encrypted_client_endpoint.on('connect', () => console.log("encrypted connection connected"))
@@ -110,3 +103,11 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000);
+
+module.exports = {
+  encrypt_message: encrypt_message,
+  decrypt_message: decrypt_message,
+  handle_message: handle_message,
+  str2ab: str2ab,
+  server: server
+}

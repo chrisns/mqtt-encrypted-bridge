@@ -32,6 +32,7 @@ before(() => {
 
 after(() => {
   mockery.disable()
+  app.server.close()
 })
 
 describe('str2ab', () => {
