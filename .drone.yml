@@ -13,6 +13,8 @@ pipeline:
       - latest
       - ${DRONE_BUILD_NUMBER}
     secrets: [ docker_username, docker_password ]
+    when:
+      branch: master
 
   deploy:
     image: docker
@@ -21,3 +23,5 @@ pipeline:
       - docker stack deploy --compose-file docker-compose.yml mqtt-encrypted-bridge
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      branch: master
