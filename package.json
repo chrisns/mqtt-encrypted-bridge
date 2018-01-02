@@ -10,17 +10,17 @@
   "author": "Chris Nesbitt-Smith",
   "license": "MIT",
   "dependencies": {
-    "libsodium": "^0.7.2",
-    "libsodium-wrappers": "^0.7.2",
-    "mqtt": "^2.11.0",
+    "libsodium": "^0.7.3",
+    "libsodium-wrappers": "^0.7.3",
+    "mqtt": "^2.15.0",
     "request": "^2.81.0",
     "tweetnacl-util": "^0.15.0"
   },
   "devDependencies": {
     "chai": "^4.1.1",
-    "mocha": "^4.0.0",
+    "mocha": "^4.1.0",
     "mockery": "^2.1.0",
-    "sinon": "^4.0.0",
+    "sinon": "^4.1.3",
     "sinon-chai": "^2.13.0"
   }
 }
